@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Luta pela Democracia em Salvador - Os Arquivos de 1983</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #8B0000;
+            --deep-red: #4A0000;
+            --accent-red: #DC143C;
+            --warm-white: #FEFEFE;
+            --cream: #FBF9F7;
+            --light-gray: #F5F3F0;
+            --medium-gray: #E8E5E1;
+            --dark-gray: #2C2C2C;
+            --text-primary: #1A1A1A;
+            --text-secondary: #4A4A4A;
+            --text-muted: #6B6B6B;
+            --shadow-subtle: 0 2px 20px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.12);
+            --shadow-strong: 0 16px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--deep-red) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-weight: 300;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+
+        .hero-date {
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator::after {
+            content: '↓';
+            font-size: 2rem;
+            opacity: 0.7;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 1rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 15px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .nav-menu a:hover {
+            background: var(--primary-red);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: none;
+            padding: 0;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        .section:nth-child(odd) {
+            background: var(--warm-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .wide-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-number {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Crimson Text', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Content Styling */
+        .content-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+
+        .content-text strong {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-red), var(--accent-red));
+            color: white;
+            padding: 3rem;
+            border-radius: 25px;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .highlight-box h3 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 4rem auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary-red);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 3rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: auto;
+            margin-left: 0;
+            text-align: right;
+            padding-right: 3rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+            margin-right: 0;
+            text-align: left;
+            padding-left: 3rem;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-subtle);
+            width: 45%;
+            position: relative;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary-red);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        /* Grid Layout */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .card h3 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Document Styling */
+        .document {
+            background: var(--medium-gray);
+            border-left: 6px solid var(--primary-red);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 0 20px 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            line-height: 1.6;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .document-header {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Table Styling */
+        .table-wrapper {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            margin: 3rem 0;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+        }
+
+        th,
+        td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        th {
+            background: var(--light-gray);
+            font-weight: 700;
+            color: var(--text-primary);
+            position: sticky;
+            top: 0;
+        }
+
+        tr:hover {
+            background: rgba(139, 0, 0, 0.05);
+        }
+
+        /* Highlighted participants */
+        .highlighted-participant {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.08) 0%, rgba(220, 20, 60, 0.05) 100%);
+            border-left: 4px solid var(--primary-red);
+            font-weight: 600;
+        }
+
+        .highlighted-participant td:first-child {
+            color: var(--primary-red);
+            font-weight: 700;
+            position: relative;
+        }
+
+        .highlighted-participant td:first-child::before {
+            content: '★';
+            color: var(--accent-red);
+            font-size: 1.2em;
+            margin-right: 0.5rem;
+        }
+
+        .highlighted-participant:hover {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.12) 0%, rgba(220, 20, 60, 0.08) 100%);
+            transform: translateX(5px);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        /* Image Carousel */
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 3rem auto;
+            background: white;
+            border-radius: 25px;
+            box-shadow: var(--shadow-medium);
+            overflow: hidden;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: contain;
+            background: var(--light-gray);
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 3rem 2rem 2rem;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-red);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .carousel-nav:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .carousel-prev {
+            left: 1rem;
+        }
+
+        .carousel-next {
+            right: 1rem;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1.5rem;
+            background: var(--light-gray);
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--medium-gray);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: var(--primary-red);
+            transform: scale(1.2);
+        }
+
+        .carousel-counter {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Image Gallery (fallback for other sections) */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .image-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.3s ease;
+        }
+
+        .image-item:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .image-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            padding: 1.5rem;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Media Players */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .media-player {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .media-player h4 {
+            font-size: 1.3rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .media-player audio,
+        .media-player video {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .media-description {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin: 2rem auto;
+                width: fit-content;
+            }
+
+            .nav-menu ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline::before {
+                left: 2rem;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                width: calc(100% - 4rem);
+                margin-left: 4rem;
+                margin-right: 0;
+                text-align: left;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            .timeline-dot {
+                left: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 1rem;
+            }
+
+            .section {
+                padding: 4rem 0;
+            }
+
+            .container,
+            .wide-container {
+                padding: 0 1rem;
+            }
+
+            .card {
+                padding: 2rem;
+            }
+
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--primary-red);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>A Luta pela Democracia em Salvador</h1>
+            <p class="hero-subtitle">Os Arquivos da Repressão e a Resistência Popular</p>
+            <div class="hero-date">28 de Janeiro de 1983</div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#conjuntura">Conjuntura</a></li>
+            <li><a href="#cronologia">Cronologia</a></li>
+            <li><a href="#repressao">Repressão</a></li>
+            <li><a href="#participantes">Participantes</a></li>
+            <li><a href="#imagens">Imagens</a></li>
+            <li><a href="#fotos">Fotos</a></li>
+            <li><a href="#resistencia">Resistência</a></li>
+            <li><a href="#documentario">Documentário</a></li>
+            <li><a href="#legado">Legado</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Introdução -->
+        <section id="introducao" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-number">01</div>
+                    <h2 class="section-title">O Pano de Fundo da Luta</h2>
+                    <p class="section-subtitle">O contexto histórico que levou à manifestação de 28 de janeiro de 1983
+                    </p>
+                </div>
+
+                <div class="grid-2">
+                    <div>
+                        <p class="content-text">Em 1983, o Brasil vivia os anos finais de uma <strong>Ditadura
+                                Militar</strong> que, embora enfraquecida e acenando com uma "abertura lenta, gradual e
+                            segura", ainda mantinha intacto seu aparato de controle e repressão.</p>
+
+                        <p class="content-text">A grave crise econômica, marcada pelo "arrocho salarial", pelo
+                            desemprego galopante e pela submissão aos ditames do <strong>Fundo Monetário Internacional
+                                (FMI)</strong>, jogava a classe trabalhadora em uma situação de penúria.</p>
+                    </div>
+
+                    <div>
+                        <div class="highlight-box">
+                            <h3>Salvador em Ebulição</h3>
+                            <p>A cidade fervilhava com a articulação de sindicatos, entidades estudantis e associações
+                                de bairro que ousavam desafiar o regime. Os documentos compilados pelos órgãos de
+                                repressão oferecem uma perspectiva única sobre esta resistência.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Análise de Conjuntura -->
+        <section id="conjuntura" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-number">02</div>
+                    <h2 class="section-title">O Brasil em Ebulição</h2>
+                    <p class="section-subtitle">Análise do contexto político e econômico da época</p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Crise Econômica e o FMI</h3>
+                        <p>O início da década de 1980, conhecido como a "década perdida", foi devastador para a economia
+                            brasileira. A política econômica da ditadura, baseada em grandes empréstimos externos, levou
+                            o país a uma crise da dívida externa sem precedentes.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>A "Abertura" Tutelada</h3>
+                        <p>O regime militar tentava controlar sua própria sucessão através de uma "abertura" limitada.
+                            Na Bahia, a nomeação de um "prefeito biônico" para Salvador foi o estopim que demonstrou as
+                            contradições dessa política.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Ressurgimento dos Movimentos</h3>
+                        <p>A crise criou o terreno fértil para o ressurgimento dos movimentos sociais. Um "novo
+                            sindicalismo" mais combativo ganhava força, culminando na articulação para a criação da CUT.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cronologia -->
+        <section id="cronologia" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-number">03</div>
+                    <h2 class="section-title">Cronologia dos Fatos</h2>
+                    <p class="section-subtitle">A sequência de eventos que levaram à manifestação</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">05 de Janeiro</div>
+                            <h4>Primeira Articulação</h4>
+                            <p>Na sede do SINDIQUÍMICA, a Unidade Sindical promove reunião com a presença do deputado
+                                eleito Carlos Augusto Marighella, decidindo pela participação em campanhas salariais.
+                            </p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">19 de Janeiro</div>
+                            <h4>Grande Reunião</h4>
+                            <p>Cerca de 200 pessoas se reúnem no Sindicato dos Bancários. Lideranças como Lídice da Mata
+                                e Haroldo Lima discursam, decidindo pela realização de uma grande passeata.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">20 a 27 de Janeiro</div>
+                            <h4>Preparativos Intensos</h4>
+                            <p>O movimento intensifica os preparativos com panfletagens, pichações e tentativas de obter
+                                autorização formal, que é negada pela Secretaria de Segurança Pública.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">28 de Janeiro</div>
+                            <h4>O Dia da Manifestação</h4>
+                            <p>Cerca de 250 pessoas se concentram no Campo Grande. A repressão é intensa, resultando em
+                                12 prisões, mas o movimento consegue marchar por trechos da cidade.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">29 de Janeiro</div>
+                            <h4>Libertação e Continuidade</h4>
+                            <p>Todos os presos são liberados através de habeas corpus. O movimento organiza novos
+                                manifestos denunciando a violência da repressão.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- O Papel da Repressão -->
+        <section id="repressao" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-number">04</div>
+                    <h2 class="section-title">O Papel da Repressão</h2>
+                    <p class="section-subtitle">Análise dos documentos e métodos do Estado autoritário</p>
+                </div>
+
+                <p class="content-text">Os documentos que fundamentam este site são a prova material do funcionamento do
+                    Estado autoritário. A repressão não era apenas violência física, mas uma complexa máquina de
+                    vigilância, controle e produção de informação.</p>
+
+                <div class="document">
+                    <p class="document-header">Exemplo 1: Mapeamento de Lideranças (Relatório do SNI)</p>
+                    <p><em>"Os escolhidos são realmente os mais atuantes e capacitados a conduzir o Movimento Operário e
+                            Sindical baianos, entre eles estão: ALOISIO CARNEIRO (FETAG/BA), MARCUS NILTON DONATO
+                            VASCONCELOS (Sindicato dos Eletricitários), OSVALDO DIAS LARANJEIRAS (Sindicato dos
+                            Bancários) e NILSON SANTOS BAHIA (USB)..."</em></p>
+                </div>
+
+                <div class="document">
+                    <p class="document-header">Exemplo 2: Criminalização do Ato Político</p>
+                    <p><em>"...apresentou presos em flagrante delito os individuos... por infração ao Artigo 286 do
+                            Codigo Penal Brasileiro (INCITAÇÃO À PRÁTICA DE CRIME)."</em></p>
+                </div>
+
+                <div class="card">
+                    <h3>Bibliografia dos Documentos</h3>
+                    <p>Os documentos analisados são provenientes de arquivos digitalizados do Fundo da Agência de
+                        Salvador do Serviço Nacional de Informações (SNI), sob guarda do Arquivo Nacional.</p>
+                    <p><strong>Referência:</strong> BR AN,AN,ASV.ACE.5234.83</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabela de Participantes -->
+        <section id="participantes" class="section">
+            <div class="wide-container">
+                <div class="section-header">
+                    <div class="section-number">05</div>
+                    <h2 class="section-title">Participantes do Movimento</h2>
+                    <p class="section-subtitle">Lista compilada a partir dos relatórios da repressão</p>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Função / Afiliação</th>
+                                    <th>Atuação</th>
+                                    <th>Situação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ada Soares Barbosa</td>
+                                    <td>Militante</td>
+                                    <td>Liderou grupo de manifestantes na Estação da Lapa</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Adyjolva Anunciação Couto</td>
+                                    <td>Presidente da Associação dos Cafeicultores</td>
+                                    <td>Liderou pequeno grupo na manifestação inicial</td>
+                                    <td>Preso em flagrante</td>
+                                </tr>
+                                <tr>
+                                    <td>Alberto Nascimento Dourado</td>
+                                    <td>Associação dos Veterinários</td>
+                                    <td>Coordenou reuniões; participou do comando do ato no Campo Grande</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Alberto Pavão</td>
+                                    <td>Militante</td>
+                                    <td>Identificado em reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Aloisio Carneiro</td>
+                                    <td>FETAG/BA</td>
+                                    <td>Citado como integrante da Comissão Nacional Pró-CUT</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Aloisio Sidão Pereira</td>
+                                    <td>Militante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Altino Bomfim</td>
+                                    <td>Militante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Amelia Dreyer Machado</td>
+                                    <td>Participante</td>
+                                    <td>Presa durante a manifestação</td>
+                                    <td>Presa</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Amauri Santos Teixeira</td>
+                                    <td>Estudante de Medicina/UFBA, PC do B</td>
+                                    <td>Preso durante a manifestação</td>
+                                    <td>Preso em flagrante</td>
+                                </tr>
+                                <tr>
+                                    <td>Ana Maria Guedes</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reuniões</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Antenor Paim Lins</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação no Campo Grande</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Antonio Carlos</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Antonio Jorge F. S. de Almeida "Macarrão"</td>
+                                    <td>Militante</td>
+                                    <td>Identificado na manifestação no Campo Grande</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Antonio Leite Matos</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação no Campo Grande</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Antonio Mario Campelo</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Antonio Renildo Santana Souza</td>
+                                    <td>Militante</td>
+                                    <td>Discursou em reunião no Sindicato dos Bancários</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Arismário Sena Ferreira</td>
+                                    <td>Estudante secundarista</td>
+                                    <td>Visto no acesso à Estação da Lapa antes do ato</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Artur Geraldo Bonfim de Paula</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Auriele Silva Alves</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reunião</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Bejamim José Ferreira Souza</td>
+                                    <td>Diretor do Sindicato dos Metalúrgicos</td>
+                                    <td>Preso durante a manifestação. Discursou em reunião posterior</td>
+                                    <td>Preso em flagrante</td>
+                                </tr>
+                                <tr>
+                                    <td>Carlos Alberto Loureiro da Costa</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Carlos Augusto Marighela Filho</td>
+                                    <td>Deputado Estadual eleito (PMDB)</td>
+                                    <td>Sugeriu a criação de um bloco parlamentar em defesa dos trabalhadores</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Carlos Martins de Carvalho</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Carlos Melgaço Valadares</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Carlos Olimpio Martins de Carvalho</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Carlos Sergio Araújo da Silva</td>
+                                    <td>Militante do PT</td>
+                                    <td>Convocava para o ato em carro de som</td>
+                                    <td>Preso em flagrante</td>
+                                </tr>
+                                <tr>
+                                    <td>Cesar Olimpio de Oliveira Neto</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Cid Pires Lima</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Dante Eustachio Luchesi Pamaciotti</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Débora Cristina de Souza Santos</td>
+                                    <td>Estudante</td>
+                                    <td>Presa durante a manifestação</td>
+                                    <td>Presa</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Denivaldo Henrique A. Araújo</td>
+                                    <td>Militante do PT</td>
+                                    <td>Convocava para o ato em carro de som</td>
+                                    <td>Preso em flagrante</td>
+                                </tr>
+                                <tr>
+                                    <td>Diva Soares Santana</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reunião</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Ditmar Scharzelmuller</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Edval Passos Souza</td>
+                                    <td>Militante do PT</td>
+                                    <td>Compôs a mesa e discursou em reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Edvaldo</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião pós-ato</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Elias Ramos de Souza</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Emanoel Souza de Jesus</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Esmeralda Maria de Oliveira</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reunião pós-ato</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Euclides Fagundes Neves</td>
+                                    <td>Participante</td>
+                                    <td>Coordenou reunião pós-ato</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Fernando Costa da Conceição</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Fernando Donato Vasconcelos</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Fernando Roth Schmidt</td>
+                                    <td>Vereador (PMDB)</td>
+                                    <td>Compôs a mesa e discursou em reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Fernando Santana</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Francisco Javier Ulpiano Alfaya Rodrigues</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Franklin C. de Oliveira Jr.</td>
+                                    <td>Presidente da Associação dos Músicos</td>
+                                    <td>Discursou em reuniões; convocava para o ato em carro de som</td>
+                                    <td>Preso em flagrante</td>
+                                </tr>
+                                <tr>
+                                    <td>Garson Luis Gonçalves Marques</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Germino Borges dos Anjos</td>
+                                    <td>Presidente do SINDIPETRO</td>
+                                    <td>Dirigia o carro de som que convocava para o ato</td>
+                                    <td>Preso em flagrante</td>
+                                </tr>
+                                <tr>
+                                    <td>Giovani Cesar Pita Lima</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Gonçalo de Melo Santos</td>
+                                    <td>Ex-SINDIPETRO / Pró-CUT</td>
+                                    <td>Identificado em reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Gutemberg Armando Diniz Guerra</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reuniões e na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Hans Scharzflmuller Filho</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Haroldo Borges R. Lima</td>
+                                    <td>Deputado eleito (PMDB)</td>
+                                    <td>Discursou em reunião, defendendo greves e passeatas</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Hilario de Jesus Leal</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Ibson Falcão Itaparica</td>
+                                    <td>Participante</td>
+                                    <td>Preso durante a manifestação</td>
+                                    <td>Preso</td>
+                                </tr>
+                                <tr>
+                                    <td>Iglesias Brasil Cabaleros</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião pós-ato</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Isolda (irmã de Ricardo Santana)</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reunião</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Jacques Wagner</td>
+                                    <td>Liderança sindical</td>
+                                    <td>Participou da definição da estratégia no Campo Grande (28/jan)</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Jane Vasconcelos de Oliveira</td>
+                                    <td>Participante</td>
+                                    <td>Identificada na manifestação</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>João Francisco Compalontere "Pe. Compa"</td>
+                                    <td>Religioso / Militante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Jorge José dos Santos Pereira Sola</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação e em reunião pós-ato</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>José Ivan Dantas Pugliesi</td>
+                                    <td>SINDIQUÍMICA</td>
+                                    <td>Participou e coordenou reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>José Luciano Leal de Melo</td>
+                                    <td>UEB</td>
+                                    <td>Coordenou debate sobre o FMI; identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Jose Oliva</td>
+                                    <td>Militante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>José Sergio Gabrielli de Azevedo</td>
+                                    <td>Economista</td>
+                                    <td>Discursou em debate sobre o FMI; identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Joviano Soares de Carvalho Neto</td>
+                                    <td>Associação dos Sociólogos</td>
+                                    <td>Mediou debate sobre o FMI</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Júlio Batista Neves Filho</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião e na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Júlio César Santos da Cruz</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião e na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Laurentino Alves de Oliveira</td>
+                                    <td>Comitê de Anistia e Direitos Humanos (CADH)</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Lídice da Mata e Souza</td>
+                                    <td>Vereadora (PMDB)</td>
+                                    <td>Compôs a mesa e discursou em reuniões; identificada na manifestação</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Ligia Maria Vieira da Silva</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reuniões e na manifestação</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Loreta Kieffer Valadares</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reuniões e na manifestação</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Luiz Antonio Alves</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Luiz Henrique Sá da Nova</td>
+                                    <td>Deputado (PMDB)</td>
+                                    <td>Pronunciou-se contra o prefeito biônico; identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Manoel Passos</td>
+                                    <td>Ex-dirigente sindical</td>
+                                    <td>Identificado em reunião pós-ato</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Marco Antonio Anthas</td>
+                                    <td>UEB</td>
+                                    <td>Identificado em reuniões e na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Marco Antonio Pires Lima</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Marcus Nilton D. Vasconcelos</td>
+                                    <td>Vice-Pres. Sind. Eletricitários / Pró-CUT</td>
+                                    <td>Discursou em reuniões; preso como um dos incitadores da passeata</td>
+                                    <td>Preso em flagrante</td>
+                                </tr>
+                                <tr>
+                                    <td>Margarida Maria de Siqueira França</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reunião pós-ato</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Maria de Fatima Galdenzzi Borges</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reunião</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Jose Rocha Lima</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reuniões e na manifestação</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Lea Rocha Fagundes</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reunião pós-ato</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Liege Rocha de Paula</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reuniões e na manifestação</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Lucia Simões</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reunião</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Oliveira Soares</td>
+                                    <td>Estudante</td>
+                                    <td>Presa durante a manifestação</td>
+                                    <td>Presa</td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Teresa Gomes do Espírito Santo</td>
+                                    <td>Participante</td>
+                                    <td>Identificada na manifestação</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Mario Cesar Nogueira</td>
+                                    <td>Coordenador da FABS</td>
+                                    <td>Participou da comissão que foi à SSP/BA; criticou a desorganização</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Nelia Cristina Silva Almeida</td>
+                                    <td>Estudante de Direito/UCSAL</td>
+                                    <td>Identificada na manifestação</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Nelson Silverio de Sant'ana Filho</td>
+                                    <td>PMDB</td>
+                                    <td>Participou da comissão que foi à SSP/BA</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Ney Jorge Campelo</td>
+                                    <td>Participante</td>
+                                    <td>Discursou em reunião; identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Nilson Santos Bahia</td>
+                                    <td>Liderança da Unidade Sindical (USB)</td>
+                                    <td>Coordenou reuniões e a estratégia do ato no dia 28/jan</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Nivaldino Felix</td>
+                                    <td>Militante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Osvaldo Dias Laranjeiras</td>
+                                    <td>Sindicato dos Bancários</td>
+                                    <td>Citado como integrante da Comissão Nacional Pró-CUT; participou e coordenou
+                                        reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Osvaldo Jose Viana</td>
+                                    <td>Militante</td>
+                                    <td>Identificado em reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Paulo Oisiovici</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Raimundo Batista da Luz</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião pós-ato</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Ricardo Santana dos Reis</td>
+                                    <td>Militante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Rita Maria Brito Santos</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reuniões</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Roberto Souza Freire</td>
+                                    <td>Estudante secundarista</td>
+                                    <td>Visto no acesso à Estação da Lapa antes do ato</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Romulo Barreto Almeida</td>
+                                    <td>Economista</td>
+                                    <td>Discursou em debate sobre o FMI</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Ronaldo Sergio Neves</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Sandra Regina Soares Freire</td>
+                                    <td>Participante</td>
+                                    <td>Identificada em reunião de planejamento</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr class="highlighted-participant">
+                                    <td>Sergio Armando Diniz Guerra</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Sergio Guimarães</td>
+                                    <td>Militante</td>
+                                    <td>Participou da comissão que foi à SSP/BA</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Sergio Ribas</td>
+                                    <td>Militante</td>
+                                    <td>Identificado em reunião pós-ato</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Sergio Valdemiro Tavares</td>
+                                    <td>Militante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Sergio Vladimiro Guimarães</td>
+                                    <td>Militante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Sidonio Cardoso Palmeira</td>
+                                    <td>Participante</td>
+                                    <td>Identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Tania (de tal)</td>
+                                    <td>FABS</td>
+                                    <td>Discursou em reunião de planejamento, criticando a lentidão do movimento</td>
+                                    <td>Citada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Tulio Hostílio Souza Santos</td>
+                                    <td>DCE/UFBA</td>
+                                    <td>Participou da comissão que foi à SSP/BA; identificado na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Valdelio Santos Silva</td>
+                                    <td>Militante</td>
+                                    <td>Liderou grupo de manifestantes na Estação da Lapa</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Valdemar Almeida de Oliveira</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reuniões e liderou grupo durante a passeata</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Valdenor Moreira Cardoso</td>
+                                    <td>Militante do PT / funcionário do SINDIQUÍMICA</td>
+                                    <td>Identificado na manifestação e em reuniões</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Valder Almeida de Oliveira</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reunião</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Valter Barrere</td>
+                                    <td>Economista</td>
+                                    <td>Discursou em debate sobre o FMI</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Valter Ribeiro da Silva</td>
+                                    <td>Militante</td>
+                                    <td>Participou do comando do ato no Campo Grande, defendendo a passeata</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Vandilson Pereira da Costa</td>
+                                    <td>Militante</td>
+                                    <td>Identificado em reuniões e na manifestação</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Washington Jose de Souza</td>
+                                    <td>Participante</td>
+                                    <td>Identificado em reuniões e em reunião pós-ato</td>
+                                    <td>Citado no relatório</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Imagens Históricas -->
+        <section id="imagens" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-number">06</div>
+                    <h2 class="section-title">Imagens Históricas</h2>
+                    <p class="section-subtitle">Documentos produzidos pelos movimentos sociais</p>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-counter">
+                        <span id="current-slide">1</span> / <span id="total-slides">9</span>
+                    </div>
+
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track" id="carousel-track">
+                            <div class="carousel-slide">
+                                <img src="https://web2.nekoweb.org/imagensditadura/Convocat%C3%83%C2%B3ria%20para%20caminhada.png"
+                                    alt="Convocatória para caminhada" loading="lazy">
+                                <div class="carousel-caption">Frente do panfleto convocando a população para a caminhada
+                                    de 28 de janeiro de 1983</div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="https://web2.nekoweb.org/imagensditadura/verso%20da%20convocat%C3%83%C2%B3ria.png"
+                                    alt="Verso da convocatória" loading="lazy">
+                                <div class="carousel-caption">Verso do panfleto com as pautas: contra o arrocho
+                                    salarial, o desemprego e o prefeito biônico</div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="https://web2.nekoweb.org/imagensditadura/Manifesto.png"
+                                    alt="Manifesto aos trabalhadores" loading="lazy">
+                                <div class="carousel-caption">Manifesto da Unidade Sindical da Bahia denunciando a
+                                    crise, o FMI e convocando a população à luta</div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="https://web2.nekoweb.org/imagensditadura/nota%20de%20repudio.png"
+                                    alt="Nota de repúdio" loading="lazy">
+                                <div class="carousel-caption">Nota de repúdio emitida pelos movimentos denunciando a
+                                    violência policial e a prisão dos manifestantes</div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="https://web2.nekoweb.org/imagensditadura/Boletim1.png" alt="Boletim CCO"
+                                    loading="lazy">
+                                <div class="carousel-caption">Capa do Boletim do Centro de Cultura Operária (CCO)</div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="https://web2.nekoweb.org/imagensditadura/Boletim2.png"
+                                    alt="Boletim CCO página 2" loading="lazy">
+                                <div class="carousel-caption">Página interna do Boletim do Centro de Cultura Operária
+                                </div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="https://web2.nekoweb.org/imagensditadura/Boletim3.png"
+                                    alt="Boletim CCO página 3" loading="lazy">
+                                <div class="carousel-caption">Página sobre eleições sindicais e a luta operária</div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="https://web2.nekoweb.org/imagensditadura/Boletim4.png"
+                                    alt="Boletim CCO página 4" loading="lazy">
+                                <div class="carousel-caption">Página com denúncia de racismo e poesia</div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="https://web2.nekoweb.org/imagensditadura/Depoimento1.png"
+                                    alt="Termo de interrogatório" loading="lazy">
+                                <div class="carousel-caption">Página do termo de interrogatório de um dos presos durante
+                                    a manifestação</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-nav carousel-prev" id="prev-btn">‹</button>
+                    <button class="carousel-nav carousel-next" id="next-btn">›</button>
+
+                    <div class="carousel-indicators" id="carousel-indicators">
+                        <button class="carousel-dot active" data-slide="0"></button>
+                        <button class="carousel-dot" data-slide="1"></button>
+                        <button class="carousel-dot" data-slide="2"></button>
+                        <button class="carousel-dot" data-slide="3"></button>
+                        <button class="carousel-dot" data-slide="4"></button>
+                        <button class="carousel-dot" data-slide="5"></button>
+                        <button class="carousel-dot" data-slide="6"></button>
+                        <button class="carousel-dot" data-slide="7"></button>
+                        <button class="carousel-dot" data-slide="8"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fotos Históricas -->
+        <section id="fotos" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-number">07</div>
+                    <h2 class="section-title">Fotos Históricas</h2>
+                    <p class="section-subtitle">Registros fotográficos complementares</p>
+                </div>
+
+                <div class="image-gallery">
+                    <div class="image-item">
+                        <img src="https://web2.nekoweb.org/imagensditadura/sergio/20170429_091054.jpg"
+                            alt="Documento histórico" loading="lazy">
+                        <div class="image-caption">Registro fotográfico de documento histórico do período</div>
+                    </div>
+
+                    <div class="image-item">
+                        <img src="https://web2.nekoweb.org/imagensditadura/sergio/IMG_20230813_142251956.jpg"
+                            alt="Arquivo da repressão" loading="lazy">
+                        <div class="image-caption">Fotografia de arquivo relacionado à ditadura militar</div>
+                    </div>
+
+                    <div class="image-item">
+                        <img src="https://web2.nekoweb.org/imagensditadura/sergio/iMobile6_2.jpg"
+                            alt="Documento digitalizado" loading="lazy">
+                        <div class="image-caption">Documento histórico digitalizado dos arquivos</div>
+                    </div>
+
+                    <div class="image-item">
+                        <img src="https://web2.nekoweb.org/imagensditadura/sergio/iMobile6_3.jpg"
+                            alt="Documento da época" loading="lazy">
+                        <div class="image-caption">Registro de documento da época da ditadura</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 21 Anos de Resistência -->
+        <section id="resistencia" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-number">08</div>
+                    <h2 class="section-title">21 Anos de Resistência</h2>
+                    <p class="section-subtitle">Contexto nacional da luta pela democracia</p>
+                </div>
+
+                <div class="card">
+                    <h3>Timeline Interativa</h3>
+                    <p>Uma linha do tempo que contextualiza os eventos de Salvador dentro do panorama dos 21 anos de
+                        ditadura militar no Brasil (1964-1985).</p>
+
+                    <div style="background: var(--light-gray); border-radius: 15px; padding: 2rem; margin: 2rem 0;">
+                        <iframe src="https://memorialdademocracia.com.br/timeline/21-anos-de-resistencia-e-luta"
+                            width="100%" height="600" frameborder="0" style="border-radius: 10px;"
+                            title="Timeline: 21 Anos de Resistência e Luta">
+                        </iframe>
+                    </div>
+
+                    <p><strong>Fonte:</strong> <a
+                            href="https://memorialdademocracia.com.br/timeline/21-anos-de-resistencia-e-luta"
+                            target="_blank">Memorial da Democracia</a></p>
+                </div>
+            </div>
+        </section>
+        <!-- Documentário -->
+        <section id="documentario" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-number">09</div>
+                    <h2 class="section-title">Documentário Audiovisual</h2>
+                    <p class="section-subtitle">Depoimentos, análises e registros sonoros da época</p>
+                </div>
+
+                <div class="media-grid">
+                    <div class="media-player">
+                        <h4>Depoimento: Lideranças Sindicais</h4>
+                        <audio controls>
+                            <source src="#" type="audio/mpeg">
+                            <source src="#" type="audio/ogg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="media-description">Entrevista com lideranças sindicais que participaram da organização
+                            da manifestação de 28 de janeiro de 1983, relatando os bastidores da articulação e os
+                            desafios enfrentados.</p>
+                    </div>
+
+                    <div class="media-player">
+                        <h4>Análise Histórica: Contexto Nacional</h4>
+                        <video controls>
+                            <source src="#" type="video/mp4">
+                            <source src="#" type="video/webm">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                        <p class="media-description">Análise de historiadores sobre o contexto nacional da ditadura
+                            militar em 1983 e como os eventos de Salvador se inseriam no movimento mais amplo de
+                            resistência.</p>
+                    </div>
+
+                    <div class="media-player">
+                        <h4>Testemunho: Participantes da Manifestação</h4>
+                        <audio controls>
+                            <source src="#" type="audio/mpeg">
+                            <source src="#" type="audio/ogg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="media-description">Relatos em primeira pessoa de participantes da manifestação,
+                            descrevendo a atmosfera do dia 28 de janeiro e a repressão policial enfrentada.</p>
+                    </div>
+
+                    <div class="media-player">
+                        <h4>Documentário: A Repressão em Salvador</h4>
+                        <video controls>
+                            <source src="#" type="video/mp4">
+                            <source src="#" type="video/webm">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                        <p class="media-description">Documentário sobre os métodos de repressão utilizados pelos órgãos
+                            de segurança em Salvador, baseado nos arquivos do SNI e depoimentos de ex-presos políticos.
+                        </p>
+                    </div>
+
+                    <div class="media-player">
+                        <h4>Entrevista: Familiares dos Presos</h4>
+                        <audio controls>
+                            <source src="#" type="audio/mpeg">
+                            <source src="#" type="audio/ogg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                        <p class="media-description">Depoimentos emocionantes de familiares dos 12 presos durante a
+                            manifestação, relatando a angústia das prisões e a mobilização para a libertação.</p>
+                    </div>
+
+                    <div class="media-player">
+                        <h4>Mesa Redonda: O Legado da Resistência</h4>
+                        <video controls>
+                            <source src="#" type="video/mp4">
+                            <source src="#" type="video/webm">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                        <p class="media-description">Mesa redonda com historiadores, ex-militantes e pesquisadores
+                            discutindo o legado dos movimentos de resistência da década de 1980 para a democracia
+                            brasileira atual.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Sobre o Material Audiovisual</h3>
+                    <p>Este conjunto de depoimentos e análises foi produzido especialmente para complementar a
+                        documentação escrita, oferecendo uma perspectiva multidimensional dos eventos que marcaram a
+                        luta pela democracia em Salvador. Os materiais incluem entrevistas inéditas com protagonistas da
+                        época e análises de especialistas em história contemporânea do Brasil.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legado -->
+        <section id="legado" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-number">10</div>
+                    <h2 class="section-title">O Legado da Luta</h2>
+                    <p class="section-subtitle">O impacto duradouro da resistência democrática</p>
+                </div>
+
+                <div class="grid-2">
+                    <div>
+                        <p class="content-text">A manifestação de 28 de janeiro de 1983 em Salvador, embora reprimida,
+                            não foi em vão. Ela se insere em um contexto muito mais amplo de resistência que culminaria
+                            no fim da Ditadura Militar.</p>
+
+                        <p class="content-text">Atos como este, que eclodiram por todo o Brasil, foram fundamentais para
+                            desgastar o regime, expor suas contradições e construir a força social que levaria ao
+                            movimento das <strong>"Diretas Já"</strong> em 1984 e à redemocratização do país.</p>
+                    </div>
+
+                    <div>
+                        <div class="card">
+                            <h3>A Construção Permanente</h3>
+                            <p>A democracia que temos hoje no Brasil é um legado direto dessa coragem. Ela foi
+                                conquistada com a luta, a organização e, muitas vezes, o sacrifício de milhares de
+                                brasileiros e brasileiras.</p>
+
+                            <p>Estudar esses eventos não é apenas olhar para o passado; é compreender que a democracia
+                                não é um presente, mas uma construção permanente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Memória e Vigilância</h3>
+                    <p>Os nomes registrados nos arquivos da repressão em Salvador representam a coragem de uma geração
+                        que não se curvou ao autoritarismo. Sua memória nos lembra que a democracia exige vigilância e
+                        participação contínua de toda a sociedade para ser defendida e aprofundada.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--dark-gray); color: white; padding: 3rem 0; text-align: center;">
+        <div class="container">
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                <strong>A Luta pela Democracia em Salvador - 1983</strong>
+            </p>
+            <p style="opacity: 0.8;">
+                Baseado em documentos do Arquivo Nacional - Fundo SNI<br>
+                Referência: BR AN,AN,ASV.ACE.5234.83
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight active section in navigation
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        function highlightActiveSection() {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.background = '';
+                link.style.color = '';
+                link.style.transform = '';
+
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.background = 'var(--primary-red)';
+                    link.style.color = 'white';
+                    link.style.transform = 'translateX(5px)';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightActiveSection);
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and timeline items
+        document.querySelectorAll('.card, .timeline-item, .image-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Lazy loading for images
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.src; // Trigger loading
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            imageObserver.observe(img);
+        });
+
+        // Carousel functionality
+        class ImageCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 9;
+                this.track = document.getElementById('carousel-track');
+                this.prevBtn = document.getElementById('prev-btn');
+                this.nextBtn = document.getElementById('next-btn');
+                this.currentSlideSpan = document.getElementById('current-slide');
+                this.totalSlidesSpan = document.getElementById('total-slides');
+                this.dots = document.querySelectorAll('.carousel-dot');
+
+                this.init();
+            }
+
+            init() {
+                if (!this.track) return; // Exit if carousel doesn't exist on page
+
+                // Set total slides
+                this.totalSlidesSpan.textContent = this.totalSlides;
+
+                // Event listeners
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+
+                // Dot navigation
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.prevSlide();
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                });
+
+                // Touch/swipe support
+                let startX = 0;
+                let endX = 0;
+
+                this.track.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+
+                this.track.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    this.handleSwipe();
+                });
+
+                // Auto-play (optional)
+                this.startAutoPlay();
+            }
+
+            updateCarousel() {
+                const translateX = -this.currentSlide * 100;
+                this.track.style.transform = `translateX(${translateX}%)`;
+
+                // Update counter
+                this.currentSlideSpan.textContent = this.currentSlide + 1;
+
+                // Update dots
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateCarousel();
+            }
+
+            prevSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.updateCarousel();
+            }
+
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.updateCarousel();
+            }
+
+            handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = startX - endX;
+
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        this.nextSlide();
+                    } else {
+                        this.prevSlide();
+                    }
+                }
+            }
+
+            startAutoPlay() {
+                // Auto-advance every 8 seconds (optional)
+                setInterval(() => {
+                    // Only auto-advance if user isn't actively interacting
+                    if (!document.querySelector('.carousel-container:hover')) {
+                        this.nextSlide();
+                    }
+                }, 8000);
+            }
+        }
+
+        // Initialize carousel when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new ImageCarousel();
+        });
+    </script>
+</body>
+
+</html>
