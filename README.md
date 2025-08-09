@@ -216,6 +216,12 @@ Para questões históricas, sugestões ou correções, abra uma issue no reposit
 
 **"A democracia não é um presente, mas uma construção permanente, que exige vigilância e participação contínua de toda a sociedade para ser defendida e aprofundada."**
 
+BRASIL. Arquivo Nacional. Sistema de Informações do Arquivo Nacional (SIAN). 
+Resultado de pesquisa: Carlos Sérgio Araújo da Silva. 
+Disponível em: https://sian.an.gov.br/sianex/consulta/resultado_pesquisa_new.asp?v_pesquisa=Carlos%20S%C3%A9rgio%20Ara%C3%BAjo%20da%20Silva&v_fundo_colecao=. 
+Acesso em: 09 jan. 2025.
+
+
 ---
 
 *Desenvolvido com 💙 para preservar a memória histórica brasileira*
